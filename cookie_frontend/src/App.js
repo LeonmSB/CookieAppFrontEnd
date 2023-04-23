@@ -47,17 +47,19 @@ const App = () => {
 
   return (
     <>
-      <h1>Cookie App</h1>
+      <h1>Cookie Shop</h1>
       <Add handleCreate={handleCreate}/>
       <div className="cookies">
       {cookies.map((cookie) => {
       return (
       <div className="cookie" key={cookie.id}>
-        <h1>h</h1>
        <h4>Type: {cookie.type}</h4>
-       <h5>Cost: {cookie.cost}</h5>
-       {/* <Edit handleUpdate={handleUpdate} cookie={cookie} /> */}
-       <button onClick={handleDelete} value={cookie.id}>Eat Cookie</button>
+       {/* <h5>Cost: {cookie.cost}</h5> */}
+       <h5>Profit per cookie: ${(cookie.cost-cookie.cost_to_make).toFixed(2)}</h5>
+       <img src={cookie.img}></img>
+       <Edit handleUpdate={handleUpdate} cookie={cookie} />
+       
+       <button onClick={handleDelete} value={cookie.id}>Sell/Eat All Cookies</button>
      </div>
    )
  })}

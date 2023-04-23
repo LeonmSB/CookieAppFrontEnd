@@ -21,22 +21,22 @@ const Add = (props) => {
         <br />
         <br />
         <label htmlFor="cost">Cost: </label>
-        <input type="number" name="cost" onChange={handleChange}/>
+        <input type="number" name="cost" step='.01' onChange={handleChange}/>
         <br />
         <br />
-        <label htmlFor="cost">Cost to Make: </label>
-        <input type="number" name="cost_to_make" onChange={handleChange}/>
+        <label htmlFor="cost_to_make">Cost to Make: </label>
+        <input type="number" step='.01' name="cost_to_make" onChange={handleChange}/>
         <br />
         <br />
-        <label htmlFor="cost">Quantity: </label>
+        <label htmlFor="quantity">Quantity: </label>
         <input type="number" name="quantity" onChange={handleChange}/>
         <br />
         <br />
-        <label htmlFor="cost">Image URL: </label>
+        <label htmlFor="img">Image URL: </label>
         <input type="text" name="img" onChange={handleChange}/>
         <br />
         <br />
-        <label htmlFor="cost">Manufacturer: </label>
+        <label htmlFor="manufacturer">Manufacturer: </label>
         <input type="text" name="manufacturer" onChange={handleChange}/>
         <input type="submit"/>
       </form>

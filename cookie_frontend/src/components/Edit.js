@@ -14,6 +14,17 @@ const Edit = (props) => {
   }
   return (
     <>
+        <h5>Update Quantity Available</h5>
+        <form onSubmit={handleSubmit}>
+        <label htmlFor="quantity"></label>
+          <input
+            type="number"
+            name="quantity"
+            value={cookie.quantity}
+            onChange={handleChange}
+          />
+                    <input type="submit" />
+        </form>
       <details>
         <summary>Edit Cookie</summary>
         <form onSubmit={handleSubmit}>
@@ -26,19 +37,30 @@ const Edit = (props) => {
           />
           <br />
           <br />
-          <label htmlFor="age">Cost: </label>
+          <label htmlFor="cost">Cost: </label>
           <input
-            type="text"
+            type="number"
+            step='.01'
             name="cost"
             value={cookie.cost}
             onChange={handleChange}
           />
           <br />
           <br />
-          <label htmlFor="madeBy">Manufacturer: </label>
+          <label htmlFor="cost_to_make">Cost To Make: </label>
+          <input
+            type="number"
+            step='.01'
+            name="cost_to_make"
+            value={cookie.cost_to_make}
+            onChange={handleChange}
+          />
+                    <br />
+          <br />
+          <label htmlFor="manufacturer">Manufacturer: </label>
           <input
             type="text"
-            name="madeBy"
+            name="manufacturer"
             value={cookie.manufacturer}
             onChange={handleChange}
           />
